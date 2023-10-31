@@ -9,7 +9,7 @@ body{
     top: 0px;
     width: 1368px;
     height: 131px;
-    background: #434040;
+    background: black;
     background-blend-mode: normal;
 }
 .home {
@@ -132,7 +132,7 @@ body{
   top: 131px;
   width: 1368px;
   height: 651.5px;
-  background: #443e3e;
+  background: black;
   background-blend-mode: normal;
 }
 .intro{
@@ -171,10 +171,133 @@ background: #C53D2B;
 margin-top: 892px;
 margin-left: 500px;
 }
+.about-img{
+    width: 206px;
+height: 206px;
+flex-shrink: 0;
+}
 .rectangle21{
 width: 775px;
 height: 513px;
 flex-shrink: 0;
 margin-top: 0px;
 fill: rgba(53, 49, 49, 0.48);
+}
+.education{
+width: 150px;
+height: 26px;
+color: #FFF;
+flex-shrink: 0;
+text-align: center;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+}
+.experience{
+width: 150px;
+height: 26px;
+flex-shrink: 0;
+color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+}
+.skills-title{
+    width: 318px;
+    height: 77px;
+    flex-shrink: 0;
+    color: white;
+    background-color: #C53D2B;
+    margin-left: 500px;
+    border-radius: 170px;
+}
+.rectangle11{
+    width: 260px;
+height: 247px;
+margin-top: 50px;
+flex-shrink: 0;
+}
+.rectangle18{
+    width: 260px;
+height: 247px;
+flex-shrink: 0;
+}
+.rectangle17{
+    width: 260px;
+height: 247px;
+flex-shrink: 0;
+}
+.rectangle16{
+    width: 260px;
+height: 247px;
+flex-shrink: 0;
+}
+.project-title{
+    width: 318px;
+height: 77px;
+flex-shrink: 0;
+background-color: #C53D2B;
+border-radius: 170px;
+color: #FFF;
+margin-left: 500px;
+}
+.rectangle22{
+    width: 260px;
+height: 247px;
+margin-left: 20px;
+flex-shrink: 0;
+}
+.rectangle37{
+    width: 388px;
+height: 150px;
+margin-left: -138px;
+flex-shrink: 0;
+background: #625050;
+}
+.rectangle40{
+    width: 388px;
+height: 150px;
+flex-shrink: 0;
+background: #625050;
+}
+.Tools-title{
+    width: 364px;
+height: 77px;
+flex-shrink: 0;
+margin-left: 500px;
+color: #FFF;
+background-color: #C53D2B;
+border-radius: 170px;
+}
+.rectangle45{
+    width: 187px;
+height: 61px;
+flex-shrink: 0;
+background: #756868;
+}
+.rectangle49{
+    width: 187px;
+    margin-left: 20px;
+height: 61px;
+flex-shrink: 0;
+background: #756868;
+}
+.rectangle52{
+    width: 187px;
+height: 61px;
+margin-left: 20px;
+flex-shrink: 0;
+background: #756868;
+}
+.rectangle46{
+    width: 187px;
+height: 61px;
+margin-left: 20px;
+background: #756868;
+flex-shrink: 0;
 }
