@@ -1,0 +1,180 @@
+body{
+    background: #000;
+}
+
+
+.rectangle1 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1368px;
+    height: 131px;
+    background: #434040;
+    background-blend-mode: normal;
+}
+.home {
+    position: absolute;
+    left: 800px;
+    top: 58px;
+    width: 33px;
+    height: 15px;
+    color: #ffffff;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+  }
+.aboutMe {
+    position: absolute;
+    left: 900px;
+    top: 58px;
+    width: 55px;
+    height: 15px;
+    color: #ffffff;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+  }
+.projects {
+    position: absolute;
+    left: 1000px;
+    top: 61px;
+    width: 46px;
+    height: 15px;
+    color: #ffffff;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+  }
+.testimonials{
+    position: absolute;
+    left: 1100px;
+    top: 61px;
+    width: 46px;
+    height: 15px;
+    color: #ffffff;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+}
+.contactMe {
+    position: absolute;
+    left: 1200px;
+    top: 61px;
+    width: 66px;
+    height: 15px;
+    color: #ffffff;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+}
+.logo{
+    position: absolute;
+  left: 99px;
+  top: 17px;
+  width: 290px;
+  height: 97px;
+
+}
+.rectangle3 {
+    position: absolute;
+    left: 800px;
+    top: 58px;
+    width: 70px;
+    height: 39px;
+    background: #665b5b;
+    background-blend-mode: normal;
+}
+.rectangle4 {
+    position: absolute;
+    left: 900px;
+    top: 58px;
+    width: 70px;
+    height: 39px;
+    background: #665b5b;
+    background-blend-mode: normal;
+  }
+.rectangle5 {
+    position: absolute;
+    left: 1200px;
+    top: 58px;
+    width: 70px;
+    height: 39px;
+    background: #665b5b;
+    background-blend-mode: normal;
+  }
+.rectangle6 {
+    position: absolute;
+    left: 1100px;
+    top: 58px;
+    width: 70px;
+    height: 39px;
+    background: #665b5b;
+    background-blend-mode: normal;
+  }
+.rectangle7{
+    position: absolute;
+    left: 1000px;
+    top: 58px;
+    width: 70px;
+    height: 39px;
+    background: #665b5b;
+    background-blend-mode: normal;
+
+}
+.main{
+    position: absolute;
+  left: 0px;
+  top: 131px;
+  width: 1368px;
+  height: 651.5px;
+  background: #443e3e;
+  background-blend-mode: normal;
+}
+.intro{
+    width: 529px;
+    margin-top: 70px;
+    height: 265px;
+    color: #FFF;
+font-family: Inter;
+font-size: 50px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+    flex-shrink: 0;
+}
+.img {
+    flex-shrink: 0;
+    border-radius: 102px;
+    background: url('images/me.jpg') left top / cover no-repeat, lightgray 50%;
+}
+.rectangle9{
+    width: 318px;
+height: 77px;
+flex-shrink: 0;
+border-radius: 170px;
+background: #C53D2B;
+margin-left: 500px;
+margin-top: 100px;
+}
+.aboutme{
+width: 318px;
+height: 77px;
+flex-shrink: 0;
+border-radius: 170px;
+color: #FFF;
+background: #C53D2B;
+margin-top: 892px;
+margin-left: 500px;
+}
+.rectangle21{
+width: 775px;
+height: 513px;
+flex-shrink: 0;
+margin-top: 0px;
+fill: rgba(53, 49, 49, 0.48);
+}
