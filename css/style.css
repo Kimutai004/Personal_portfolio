@@ -14,8 +14,6 @@ body{
 }
 .home {
     position: absolute;
-    left: 800px;
-    top: 58px;
     width: 33px;
     height: 15px;
     color: #ffffff;
@@ -26,8 +24,6 @@ body{
   }
 .aboutMe {
     position: absolute;
-    left: 900px;
-    top: 58px;
     width: 55px;
     height: 15px;
     color: #ffffff;
@@ -38,8 +34,6 @@ body{
   }
 .projects {
     position: absolute;
-    left: 1000px;
-    top: 61px;
     width: 46px;
     height: 15px;
     color: #ffffff;
@@ -50,8 +44,6 @@ body{
   }
 .testimonials{
     position: absolute;
-    left: 1100px;
-    top: 61px;
     width: 46px;
     height: 15px;
     color: #ffffff;
@@ -62,8 +54,6 @@ body{
 }
 .contactMe {
     position: absolute;
-    left: 1200px;
-    top: 61px;
     width: 66px;
     height: 15px;
     color: #ffffff;
@@ -150,7 +140,7 @@ line-height: normal;
 .img {
     flex-shrink: 0;
     border-radius: 102px;
-    background: url('images/me.jpg') left top / cover no-repeat, lightgray 50%;
+    background: url('images/me.jpg');
 }
 .rectangle9{
     width: 318px;
@@ -300,4 +290,61 @@ height: 61px;
 margin-left: 20px;
 background: #756868;
 flex-shrink: 0;
+}
+.Testimonial-Title{
+    width: 318px;
+    height: 77px;
+    flex-shrink: 0;
+    background-color: #C53D2B;
+    border-radius: 170px;
+    color: #FFF;
+    margin-left: 500px;
+    margin-top: 50px;
+}
+.rectangle57{
+    width: 300px;
+height: 177px;
+flex-shrink: 0;
+border-radius: 50px;
+background: #D9D9D9;
+}
+.rectangle59{
+    width: 300px;
+height: 177px;
+flex-shrink: 0;
+border-radius: 50px;
+background: #D9D9D9;
+}
+.rectangle60{
+width: 300px;
+height: 177px;
+flex-shrink: 0;
+border-radius: 50px;
+background: #D9D9D9;
+}
+.contact-title{
+    width: 364px;
+height: 77px;
+flex-shrink: 0;
+background-color: #C53D2B;
+margin-left: 500px;
+border-radius: 170px;
+color: white;
+margin-top: 50px;
+}
+.rectangle27{
+    width: 1200px;
+    height: 576px;
+    flex-shrink: 0;
+    border-radius: 90px;
+background: #353131;
+}
+.rectangle28{
+    width: 668px;
+height: 476px;
+margin-top: 50px;
+margin-left: 50px;
+flex-shrink: 0;
+border-radius: 30px;
+background: #895757;
 }
