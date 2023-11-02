@@ -53,7 +53,8 @@
             <div class="row">
                 <div class="col-sm-7">
                     <div class="intro">
-                        <p>Hey, My name Is Peter Kimutai, A Full Stack Developer</p>
+                        <p>Hi, My name Is Peter Kimutai, A Full Stack Developer!</p>
+                        
                     </div>
                 </div>
                 <div class="col-sm-5">
@@ -63,11 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12">
-                <div class="rectangle9">
-                    <button value="" class="">Read More</button>
-                </div>
-            </div>
+            
         </div>
     </section>
     <section>
@@ -77,8 +74,6 @@
                     <h2>About Me</h2>
                 </div>
             </div>
-        </div>
-        <div class="container">
             <div class="about-img">
                 <img src="images/me.jpg" alt="" srcset="" style="border-radius: 206px; width:206px;">
             </div>
@@ -142,35 +137,20 @@
                 <h2>Projects</h2>
             </div>
             <div class="row">
-                <div class="rectangle22">
-                    <img src="images/html.png" alt="" srcset="">
+                
+                <div class="col-sm-6">
+                    <div class="rectangle37">
+                        <img src="images/js.png" alt="" srcset="">
+                    </div>
                 </div>
-                <div class="rectangle37"></div>
-                <div class="rectangle34">
-                    <img src="images/html.png" alt="" srcset="">
+                <div class="col-sm-6">
+                    <div class="rectangle37">
+                        <img src="images/js.png" alt="" srcset="">
+                    </div>
                 </div>
-                <div class="rectangle40"></div>
+                
             </div>
-            <div class="row">
-                <div class="rectangle22">
-                    <img src="images/html.png" alt="" srcset="">
-                </div>
-                <div class="rectangle37"></div>
-                <div class="rectangle34">
-                    <img src="images/html.png" alt="" srcset="">
-                </div>
-                <div class="rectangle40"></div>
-            </div>
-            <div class="row">
-                <div class="rectangle22">
-                    <img src="images/html.png" alt="" srcset="">
-                </div>
-                <div class="rectangle37"></div>
-                <div class="rectangle34">
-                    <img src="images/html.png" alt="" srcset="">
-                </div>
-                <div class="rectangle40"></div>
-            </div>
+            
         </div>
     </section>
     <section>
@@ -206,22 +186,27 @@
                 <h2>Testimonials</h2>
             </div>
             <div class="row">
-                <div class="rectangle57">
-                    <img src="images/KIMUTAI.png" alt="" srcset="" style="width: 118px;
-                    height: 113px;
-                    flex-shrink: 0;border-radius: 118px;">
+                <div class="col-sm-4">
+                    <div class="rectangle57">
+                        <img src="images/KIMUTAI.png" alt="" srcset="" style="width: 118px;
+                        height: 113px;
+                        flex-shrink: 0;border-radius: 118px;">
+                    </div>
                 </div>
-                <div class="rectangle59">
-                    <img src="images/KIMUTAI.png" alt="" srcset="" style="width: 118px;
-                    height: 113px;
-                    flex-shrink: 0;border-radius: 118px;">
+                <div class="col-sm-4">
+                    <div class="rectangle57">
+                        <img src="images/KIMUTAI.png" alt="" srcset="" style="width: 118px;
+                        height: 113px;
+                        flex-shrink: 0;border-radius: 118px;">
+                    </div>
                 </div>
-                <div class="rectangle60">
-                    <img src="images/KIMUTAI.png" alt="" srcset="" style="width: 118px;
-                    height: 113px;
-                    flex-shrink: 0;border-radius: 118px;">
+                <div class="col-sm-4">
+                    <div class="rectangle57">
+                        <img src="images/KIMUTAI.png" alt="" srcset="" style="width: 118px;
+                        height: 113px;
+                        flex-shrink: 0;border-radius: 118px;">
+                    </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -230,16 +215,37 @@
             <div class="contact-title">
                 <h2>Contact Me</h2>
             </div>
-            <div class="row">
-                <div class="rectangle27">
-                    <div class="rectangle28">
-                        
-                    </div>
-                </div>
-            </div>
+            <form action="" method="post" required class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+            
         </div>
     </section>
-    <footer></footer>
-    
+    <footer>
+        <div class="container">
+            <div class="social-title">
+                <h2>Connect With Me</h2>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const text = document.querySelector('.intro p').textContent;
+        const typingSpeed = 150; // Adjust the typing speed (milliseconds per character)
+
+        function typeText(index) {
+            document.querySelector('.intro p').textContent = text.slice(0, index);
+            if (index < text.length) {
+                setTimeout(() => typeText(index + 1), typingSpeed);
+            }
+        }
+
+        typeText(0);
+    </script>
 </body>
 </html>

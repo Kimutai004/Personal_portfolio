@@ -13,51 +13,68 @@ body{
     background-blend-mode: normal;
 }
 .home {
-    position: absolute;
-    width: 33px;
-    height: 15px;
+    display: block; /* Change from absolute to block to make it a block-level element */
+    width: 100%;     /* Make the <a> element take the full width of the parent div */
+    height: 100%;    /* Make the <a> element take the full height of the parent div */
     color: #ffffff;
+    text-align: center;
     font-family: Inter;
+    background: #665b5b;
+    border-radius: 40px;
     font-size: 12px;
     font-weight: 400;
-    line-height: 14.52px;
-  }
+    line-height: 39px; /* Adjust line-height to vertically center the text */
+    text-decoration: none; /* Remove underline on the link */
+}
 .aboutMe {
-    position: absolute;
-    width: 55px;
-    height: 15px;
+    display: block;
+    width: 100%;
+    height: 100%;
     color: #ffffff;
     font-family: Inter;
+    text-align: center;
+    background: #665b5b;
+    border-radius: 40px;
     font-size: 12px;
     font-weight: 400;
+    text-decoration: none;
     line-height: 14.52px;
   }
 .projects {
     position: absolute;
-    width: 46px;
-    height: 15px;
+    width: 70px;
+    height: 35px;
     color: #ffffff;
     font-family: Inter;
+    text-align: center;
+    background: #665b5b;
+    border-radius: 40px;
     font-size: 12px;
     font-weight: 400;
     line-height: 14.52px;
   }
 .testimonials{
     position: absolute;
-    width: 46px;
-    height: 15px;
+    width: 70px;
+    height: 35px;
     color: #ffffff;
+    text-align: center;
     font-family: Inter;
+    border-radius: 40px;
+    background: #665b5b;
     font-size: 12px;
     font-weight: 400;
     line-height: 14.52px;
 }
 .contactMe {
     position: absolute;
-    width: 66px;
-    height: 15px;
+    width: 70px;
+    height: 35px;
     color: #ffffff;
+    text-align: center;
     font-family: Inter;
+    background: #665b5b;
+    border-radius: 40px;
     font-size: 12px;
     font-weight: 400;
     line-height: 14.52px;
@@ -76,16 +93,15 @@ body{
     top: 58px;
     width: 70px;
     height: 39px;
-    background: #665b5b;
     background-blend-mode: normal;
 }
+
 .rectangle4 {
     position: absolute;
     left: 900px;
     top: 58px;
     width: 70px;
     height: 39px;
-    background: #665b5b;
     background-blend-mode: normal;
   }
 .rectangle5 {
@@ -94,7 +110,6 @@ body{
     top: 58px;
     width: 70px;
     height: 39px;
-    background: #665b5b;
     background-blend-mode: normal;
   }
 .rectangle6 {
@@ -103,7 +118,6 @@ body{
     top: 58px;
     width: 70px;
     height: 39px;
-    background: #665b5b;
     background-blend-mode: normal;
   }
 .rectangle7{
@@ -112,7 +126,6 @@ body{
     top: 58px;
     width: 70px;
     height: 39px;
-    background: #665b5b;
     background-blend-mode: normal;
 
 }
@@ -121,12 +134,12 @@ body{
   left: 0px;
   top: 131px;
   width: 1368px;
-  height: 651.5px;
+  height: 300.5px;
   background: black;
   background-blend-mode: normal;
 }
 .intro{
-    width: 529px;
+    width: 500px;
     margin-top: 70px;
     height: 265px;
     color: #FFF;
@@ -138,28 +151,30 @@ line-height: normal;
     flex-shrink: 0;
 }
 .img {
-    flex-shrink: 0;
     border-radius: 102px;
     background: url('images/me.jpg');
 }
-.rectangle9{
-    width: 318px;
-height: 77px;
-flex-shrink: 0;
-border-radius: 170px;
-background: #C53D2B;
-margin-left: 500px;
-margin-top: 100px;
-}
-.aboutme{
-width: 318px;
-height: 77px;
+.ButtonShap{
+    width: 200px;
+height: 40px;
 flex-shrink: 0;
 border-radius: 170px;
 color: #FFF;
 background: #C53D2B;
-margin-top: 892px;
-margin-left: 500px;
+font-size: medium;
+margin-left: 300px;
+margin-top: 0px;
+}
+.aboutme{
+width: 200px;
+height: 40px;
+text-align: center;
+flex-shrink: 0;
+border-radius: 170px;
+color: #FFF;
+background: #C53D2B;
+margin-top: 550px;
+margin-left: 400px;
 }
 .about-img{
     width: 206px;
@@ -167,19 +182,20 @@ height: 206px;
 flex-shrink: 0;
 }
 .rectangle21{
-width: 775px;
-height: 513px;
+width: 600px;
+height: 200px;
 flex-shrink: 0;
 margin-top: 0px;
 fill: rgba(53, 49, 49, 0.48);
 }
 .education{
-width: 150px;
-height: 26px;
+width: 200px;
+height: 45px;
 color: #FFF;
 flex-shrink: 0;
 text-align: center;
 font-family: Inter;
+margin-top: -180px;
 font-size: 15px;
 font-style: normal;
 font-weight: 900;
@@ -188,6 +204,7 @@ line-height: normal;
 .experience{
 width: 150px;
 height: 26px;
+margin-left: -170px;
 flex-shrink: 0;
 color: #FFF;
 text-align: center;
@@ -198,22 +215,23 @@ font-weight: 900;
 line-height: normal;
 }
 .skills-title{
-    width: 318px;
-    height: 77px;
+    width: 200px;
+    height: 40px;
     flex-shrink: 0;
     color: white;
+    text-align: center;
     background-color: #C53D2B;
     margin-left: 500px;
     border-radius: 170px;
 }
 .rectangle11{
-    width: 260px;
+width: 260px;
 height: 247px;
 margin-top: 50px;
 flex-shrink: 0;
 }
 .rectangle18{
-    width: 260px;
+width: 260px;
 height: 247px;
 flex-shrink: 0;
 }
@@ -228,11 +246,13 @@ height: 247px;
 flex-shrink: 0;
 }
 .project-title{
-    width: 318px;
-height: 77px;
+    width: 200px;
+height: 40px;
 flex-shrink: 0;
 background-color: #C53D2B;
+margin: 50px;
 border-radius: 170px;
+text-align: center;
 color: #FFF;
 margin-left: 500px;
 }
@@ -243,9 +263,10 @@ margin-left: 20px;
 flex-shrink: 0;
 }
 .rectangle37{
-    width: 388px;
-height: 150px;
-margin-left: -138px;
+width: 500px;
+height: 250px;
+margin-left: -50px;
+border-radius: 10px;
 flex-shrink: 0;
 background: #625050;
 }
@@ -256,11 +277,13 @@ flex-shrink: 0;
 background: #625050;
 }
 .Tools-title{
-    width: 364px;
-height: 77px;
+    width: 200px;
+height: 40px;
+margin: 50px;
 flex-shrink: 0;
 margin-left: 500px;
 color: #FFF;
+text-align: center;
 background-color: #C53D2B;
 border-radius: 170px;
 }
@@ -292,12 +315,14 @@ background: #756868;
 flex-shrink: 0;
 }
 .Testimonial-Title{
-    width: 318px;
-    height: 77px;
+    width: 200px;
+    height: 40px;
     flex-shrink: 0;
+    margin: 50px;
     background-color: #C53D2B;
     border-radius: 170px;
     color: #FFF;
+    text-align: center;
     margin-left: 500px;
     margin-top: 50px;
 }
@@ -323,22 +348,63 @@ border-radius: 50px;
 background: #D9D9D9;
 }
 .contact-title{
-    width: 364px;
-height: 77px;
+    width: 200px;
+height: 40px;
+margin: 50px;
 flex-shrink: 0;
 background-color: #C53D2B;
 margin-left: 500px;
 border-radius: 170px;
+text-align: center;
 color: white;
 margin-top: 50px;
 }
-.rectangle27{
-    width: 1200px;
-    height: 576px;
-    flex-shrink: 0;
-    border-radius: 90px;
-background: #353131;
+.contact-form {
+    background-color:#33332f83;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
 }
+
+.contact-form label {
+    display: inline;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #665b5b;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #444;
+}
+
 .rectangle28{
     width: 668px;
 height: 476px;
@@ -347,4 +413,18 @@ margin-left: 50px;
 flex-shrink: 0;
 border-radius: 30px;
 background: #895757;
+}
+.social-title{
+    width: 300px;
+height: 40px;
+flex-shrink: 0;
+background-color: #C53D2B;
+margin-left: 500px;
+border-radius: 170px;
+text-align: center;
+color: white;
+margin-top: 50px;
+}
+footer{
+    height: 400px;
 }
