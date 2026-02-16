@@ -1,375 +1,1340 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peter Kimutai Kiptoo - Full-Stack Software Engineer specializing in React, Node.js, TypeScript, and modern web technologies">
+    <meta name="keywords" content="Full-Stack Developer, Software Engineer, React, Node.js, TypeScript, Web Development">
+    <meta name="author" content="Peter Kimutai Kiptoo">
+    <title>Peter Kimutai Kiptoo | Full-Stack Software Engineer</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     
-    <style>
-        html {
-            scroll-behavior: smooth; 
-        }
-        
-    </style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section id="home">
-        <canvas id="techCanvas"></canvas>
-        <div class="line1"></div>
-        <nav>
-            <button id="navToggle" class="nav-toggle">☰</button>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="intro">
-            <h1>Hi,<br>
-                I'm <span>Peter Kimutai Kiptoo</span></h1>
-            <p>Full-Stack Software Engineer</p>
-        </div>
-        <div class="center-container ">
-            <button class="cvbutton">
-                <a href="images/Resume.pdf" target="_blank">Download CV</a>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-wrapper">
+            <a href="#home" class="logo">
+                <span class="logo-text">Peter Kimutai</span>
+            </a>
             
-            <button class="contacts">
-                <a href="#contact">Connect With Me</a>
+            <div class="nav-menu-wrapper" id="navMenuWrapper">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-item active">Home</a></li>
+                    <li><a href="#about" class="nav-item">About</a></li>
+                    <li><a href="#experience" class="nav-item">Experience</a></li>
+                    <li><a href="#projects" class="nav-item">Projects</a></li>
+                    <li><a href="#skills" class="nav-item">Skills</a></li>
+                    <li><a href="#contact" class="nav-item">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn-contact">Get In Touch</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/peter-kimutai-692016222/" target="_blank">
-                    <img src="images/LinkedIn.png"LinkedIn" style="width: 40px; height: 40px;">
-                </a>
-                <a href="https://github.com/Kimutai004" target="_blank">
-                    <img src="images/GitHub.png" alt="GitHub" style="width: 40px; height: 40px;">
-                </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <canvas id="particlesCanvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Peter Kimutai Kiptoo</h1>
+                <h2 class="hero-title">
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    Passionate Full-Stack Software Engineer crafting elegant solutions to complex problems. 
+                    Specializing in building scalable web applications with modern technologies.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Let's Connect
+                    </a>
+                    <a href="images/Resume.pdf" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://www.linkedin.com/in/peter-kimutai-692016222/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Kimutai004" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/~01ecc9ef82cdbbe06a" target="_blank" class="social-icon" aria-label="Upwork">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                    <a href="https://www.fiverr.com/kimutai004" target="_blank" class="social-icon" aria-label="Fiverr">
+                        <i class="fas fa-handshake"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-down">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">About</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">A quick snapshot of who I am and how I work</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-wrapper">
+                        <img src="images/me.png" alt="Peter Kimutai Kiptoo">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Full‑Stack Engineer focused on clean UX</h3>
+                    <p>
+                        I’m a full-stack developer with expertise in TypeScript, React, Next.js, Node.js, and various database technologies,
+                        including MongoDB, MySQL, Firebase, MSSQL, and PostgreSQL. I use Prisma to streamline data access and enhance efficiency.
+                    </p>
+                    <p>
+                        I have a proven track record of delivering user-centered web applications, prioritizing intuitive user experiences and
+                        seamless interactions.
+                    </p>
+                    <p>
+                        I’m seeking web development opportunities where I can leverage my skills to create meaningful connections between
+                        products and users. If you’re interested in working together, please feel free to contact me.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item"><i class="fas fa-check-circle"></i> Product-minded engineering</div>
+                        <div class="highlight-item"><i class="fas fa-check-circle"></i> Performance & accessibility</div>
+                        <div class="highlight-item"><i class="fas fa-check-circle"></i> Clean APIs & scalable architecture</div>
+                        <div class="highlight-item"><i class="fas fa-check-circle"></i> Pixel-perfect responsive UI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Here are some of my recent projects that showcase my skills and expertise</p>
             </div>
             
-        </div>
-    </section>
-
-
-
-    <section id="about">
-        <div class="about">
-            <div class="line3"></div>
-            <h2>About Me</h2>
-            <div class="row">
-                <img src="images/me.png">
-                <p>
-                    I’m a full-stack developer with expertise in TypeScript, React, Next.js, Node.js, and various database technologies, including MongoDB, MySQL, Firebase, MSSQL, and PostgreSQL. I use Prisma to streamline data access and enhance efficiency. <br><br>
-                  
-                    I have a proven track record of delivering user-centered web applications, prioritizing intuitive user experiences and seamless interactions. <br><br>
-                  
-                    I am seeking web development opportunities where I can leverage my skills to create meaningful connections between products and users.<br><br>
-                  
-                    If you’re interested in working together, please feel free to contact me!
-                  </p>
-                  
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="projects">
-            <h2>Projects</h2>
-            <div class="column">
-                <div class="project-dets">
-                    <div class="column">
-                        <h3>AgroHub</h3>
-                        <p>
-                            AgroHub is a robust platform crafted to empower farmers in maximizing their profits through precise expense tracking and insightful market analysis. By offering tools that allow for detailed tracking of all operational costs, AgroHub helps farmers monitor and manage expenses associated with labor, inputs, and equipment. The platform also includes a market analysis feature that provides real-time insights into commodity prices, demand trends, and competitor activity, enabling farmers to make data-driven decisions about when and where to sell their products. With AgroHub, farmers gain a powerful ally in optimizing their profitability and growing their agribusiness sustainably.
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="images/AgroHub.png" alt="AgroHub Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Kimutai004" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AgroHub</h3>
+                        <p class="project-description">
+                            A comprehensive agricultural management platform empowering farmers through precise expense tracking, 
+                            market analysis, and real-time commodity price insights. Features include cost monitoring, demand 
+                            trend analysis, and data-driven decision-making tools.
                         </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express</span>
+                        </div>
                     </div>
-                    <img src="images/AgroHub.png" alt="Chat Application">
                 </div>
-                <div class="project-dets">
-                    <div class="column">
-                        <h3>Tikiti App</h3>
-                        <p>
-                            Tikiti App is a versatile ticketing platform that simplifies event management and ticket purchasing for both organizers and attendees. Designed to cater to diverse events, from concerts to workshops, Tikiti allows organizers to create events, manage ticket types (such as early bird, regular, and VIP), and track sales in real time. For attendees, Tikiti provides a user-friendly interface to browse events, book tickets, and access information on event details and locations. Integrated with secure payment systems like M-Pesa, the app also offers unique features like the ability to save funds within the app for future bookings. With a focus on accessibility and seamless transactions, Tikiti App makes event planning and ticket buying straightforward and efficient for users everywhere.
-                        </p>
-                    </div>
-                    <img src="images/Tikiti.png" alt="Task Manager">
-                </div>
-                <div class="project-dets">
-                    <div class="column">
-                        <h3>Hospital Management System</h3>
-                        <p>
-                            The University Clinic Record-Keeping System is a streamlined digital solution designed to simplify the management of medical records for university clinics. Built to replace traditional paper-based systems, this application enables clinic staff to securely store, access, and manage patient records with ease. Key features include patient registration, appointment scheduling, and medical history tracking, which help improve workflow efficiency and enhance patient care. The system is developed with a focus on security and privacy, ensuring that sensitive patient information is protected in compliance with healthcare data standards. By digitizing record-keeping processes, this project reduces administrative overhead and allows medical staff to focus on delivering high-quality care to students.
-                        </p>
-                    </div>
-                    <img src="images/Hos.png" alt="Hospital Management System">
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="experience">
-        <div class="experience">
-            <h2>Experience</h2>
-            <div class="line6"></div>
-            <div class="exp-row">
-                <div class="column left">
-                    <h3><em>Software Engineer</em></h3>
-                    <p>Upwork, Remote</p>
-                    <p>October 2021 - Present</p>
-                    <p>Responsibilities:</p>
-                    <ul>
-                        <li>Developed and maintained web applications using React, Node.js, and MongoDB</li>
-                        <li>Collaborated with the design team to create user-friendly interfaces</li>
-                        <li>Performed code reviews and provided feedback to improve code quality</li>
-                        <li>Implemented RESTful APIs for seamless data transfer between the front-end and back-end</li>
-                    </ul>
-                </div>
-                <div class="column right">
-                    <h3><em>Front-End Developer</em></h3>
-                    <p>Upwork, Remote</p>
-                    <p>Jan 2022, Present</p>
-                    <p>Responsibilities:</p>
-                    <ul>
-                        <li>Designed and developed user interfaces for web applications using HTML, CSS, and JavaScript</li>
-                        <li>Worked closely with the back-end team to integrate front-end code with server-side logic</li>
-                        <li>Tested and debugged code to ensure high performance and responsiveness</li>
-
-                        <li>Optimized web applications for maximum speed and scalability</li>
-                    </ul>
-                </div>
-                <div class="column left">
-                    <h3><em>Back-End Developer</em></h3>
-                    <p>Fiverr, Remote</p>
-                    <p>Jan 2022 - Present</p>
-                    <p>Responsibilities:</p>
-                    <ul>
-                        <li>Assisted in the development of web applications using React, Node.js, and MongoDB</li>
-                        <li>Participated in code reviews and provided feedback on code quality</li>
-                        <li>Implemented security measures to protect user data and prevent unauthorized access</li>
-                        <li>Learned best practices for front-end and back-end development</li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <div class="skills">
-            <h2>Skills</h2>
-            <!-- Skills content goes here -->
-            <div class="skill-row">
-                <div class="column">
-                    <h3><em>Front-End</em></h3>
-                    <ul>
-                        <li><i class="fab fa-html5"></i> HTML</li>
-                        <li><i class="fab fa-css3-alt"></i> CSS</li>
-                        <li><i class="fab fa-js"></i> JavaScript</li>
-                        <li><i class="fab fa-react"></i> React</li>
-                        <li><i class="fab fa-angular"></i> Angular</li>
-                        <li><i class="fab fa-vue"></i> Vue</li>
-                    </ul>
-                </div>
-                <div class="column">
-                    <h3><em>Back-End</em></h3>
-                    <ul>
-                        <li><i class="fab fa-node-js"></i> Node.js</li>
-                        <li><i class="fas fa-server"></i> Express</li>
-                        <li><i class="fas fa-code"></i> Dart</li>
-                        <li><i class="fas fa-python"></i> Python</li>
-                        <li><i class="fab fa-django"></i> Django</li>
-                        <li><i class="fas fa-flask"></i> Flask</li>
-                        <li><i class="fab fa-java"></i> Java</li>
-                    </ul>
-                </div>
-                <div class="column">
-                    <h3><em>Databases</em></h3>
-                    <ul>
-                        <li><i class="fas fa-database"></i> MySQL</li>
-                        <li><i class="fas fa-database"></i> PostgreSQL</li>
-                        <li><i class="fas fa-database"></i> MongoDB</li>
-                        <li><i class="fas fa-database"></i> Firebase</li>
-                        <li><i class="fas fa-database"></i> SQLite</li>
-                        <li><i class="fas fa-database"></i> Oracle</li>
-                        <li><i class="fas fa-database"></i> SQL Server</li>
-                    </ul>
-                </div>
-                <div class="column">
-                    <h3><em>Tools</em></h3>
-                    <ul>
-                        <li><i class="fab fa-git"></i> Git</li>
-                        <li><i class="fab fa-github"></i> GitHub</li>
-                        <li><i class="fab fa-gitlab"></i> GitLab</li>
-                        <li><i class="fab fa-jira"></i> Jira</li>
-                        <li><i class="fab fa-slack"></i> Slack</li>
-                        <li><i class="fab fa-zoom"></i> Zoom</li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact">
-            <h2>Contact</h2>
-            <div class="contact-container">
-                <form id="contactForm" class="contact-form" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
                 
-                <div class="contact-details">
-                    <h3>Contact Details</h3>
-                    <p><img src="images/Phone.png">+254742744884 </p>
-                    <p><img src="images/Mail.png" > peterkimutai004@gmail.com</p>
-                    <p><img src="images/Upwork.png" ><a href="https://www.upwork.com/freelancers/~01ecc9ef82cdbbe06a?mp_source=share">Upwork</a></p>
-                    <p><img src="images/Fiverr.png" ><a href="https://www.fiverr.com/kimutai004?up_rollout=true">Fiverr</a></p>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="images/Tikiti.png" alt="Tikiti Ticketing App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Kimutai004" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tikiti App</h3>
+                        <p class="project-description">
+                            A versatile event ticketing platform simplifying event management and ticket purchasing. 
+                            Features include event creation, multi-tier ticketing, real-time sales tracking, M-Pesa integration, 
+                            and in-app wallet functionality.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Prisma</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="images/Hos.png" alt="Hospital Management System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Kimutai004" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Hospital Management System</h3>
+                        <p class="project-description">
+                            A secure digital record-keeping system for university clinics. Features patient registration, 
+                            appointment scheduling, medical history tracking, and HIPAA-compliant data protection ensuring 
+                            enhanced workflow efficiency.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Express</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="images/AgroHub.png" alt="KJIT MIS">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Kimutai004" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">KJIT MIS</h3>
+                        <p class="project-description">
+                            A management information system built to streamline operations, centralize records, and provide
+                            fast reporting dashboards for day-to-day decision making.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MIS</span>
+                            <span class="tech-tag">Dashboards</span>
+                            <span class="tech-tag">Reporting</span>
+                            <span class="tech-tag">RBAC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="images/Tikiti.png" alt="GRM System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Kimutai004" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">GRM</h3>
+                        <p class="project-description">
+                            A GRM platform to capture, track, and resolve requests with clear workflows, audit history, and
+                            status visibility across teams.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Workflows</span>
+                            <span class="tech-tag">Tickets</span>
+                            <span class="tech-tag">Audit Log</span>
+                            <span class="tech-tag">Notifications</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="images/Hos.png" alt="Tourism Agency Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Kimutai004" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tourism Agency Platform</h3>
+                        <p class="project-description">
+                            A modern tourism agency website and booking workflow for showcasing packages, collecting
+                            inquiries, and managing client requests efficiently.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Bookings</span>
+                            <span class="tech-tag">CMS</span>
+                            <span class="tech-tag">SEO</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="project-image">
+                        <img src="images/AgroHub.png" alt="Dairy Management System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Kimutai004" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dairy Management System</h3>
+                        <p class="project-description">
+                            A dairy operations system for recording deliveries, tracking inventory, managing payments, and
+                            generating performance insights for day-to-day operations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Inventory</span>
+                            <span class="tech-tag">Payments</span>
+                            <span class="tech-tag">Analytics</span>
+                            <span class="tech-tag">Reports</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta" data-aos="fade-up">
+                <a href="https://github.com/Kimutai004" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i> View More on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">My Journey</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Professional journey showcasing my growth and expertise</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">October 2021 - Present</div>
+                        <h3 class="timeline-title">Software Engineer</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> Upwork | Remote
+                        </h4>
+                        <p class="timeline-description">
+                            Leading full-stack development projects for diverse clients, delivering robust web applications 
+                            with modern technologies.
+                        </p>
+                        <ul class="timeline-responsibilities">
+                            <li>Developed and maintained 20+ web applications using React, Node.js, and MongoDB</li>
+                            <li>Collaborated with design teams to create intuitive, user-friendly interfaces</li>
+                            <li>Conducted comprehensive code reviews, improving code quality by 40%</li>
+                            <li>Implemented RESTful APIs ensuring seamless front-end and back-end integration</li>
+                            <li>Mentored junior developers and established best coding practices</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 2022 - Present</div>
+                        <h3 class="timeline-title">Front-End Developer</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> Upwork | Remote
+                        </h4>
+                        <p class="timeline-description">
+                            Specialized in creating responsive, performant user interfaces with modern front-end frameworks.
+                        </p>
+                        <ul class="timeline-responsibilities">
+                            <li>Designed and developed pixel-perfect user interfaces using HTML5, CSS3, and JavaScript</li>
+                            <li>Integrated front-end applications with RESTful and GraphQL APIs</li>
+                            <li>Optimized applications achieving 95+ PageSpeed scores</li>
+                            <li>Implemented responsive designs ensuring cross-browser compatibility</li>
+                            <li>Reduced page load times by 60% through code splitting and lazy loading</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>React</span>
+                            <span>Next.js</span>
+                            <span>Tailwind CSS</span>
+                            <span>Redux</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 2022 - Present</div>
+                        <h3 class="timeline-title">Back-End Developer</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> Fiverr | Remote
+                        </h4>
+                        <p class="timeline-description">
+                            Building scalable server-side applications and APIs with focus on security and performance.
+                        </p>
+                        <ul class="timeline-responsibilities">
+                            <li>Developed robust RESTful APIs serving 10,000+ daily requests</li>
+                            <li>Implemented authentication systems with JWT and OAuth 2.0</li>
+                            <li>Optimized database queries reducing response times by 70%</li>
+                            <li>Integrated third-party services including payment gateways and cloud storage</li>
+                            <li>Established security best practices protecting against common vulnerabilities</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                            <span>Prisma</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">What I Do Best</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">A comprehensive toolkit for building modern web applications</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Front-End Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-react"></i> React & Next.js</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-js"></i> TypeScript / JavaScript</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-html5"></i> HTML5 & CSS3</span>
+                                <span class="skill-percentage">98%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="98"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-angular"></i> Angular & Vue.js</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Back-End Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-node-js"></i> Node.js & Express</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-python"></i> Python & Django</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-code"></i> REST APIs & GraphQL</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-java"></i> Java & Spring Boot</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases & ORM</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-database"></i> PostgreSQL & MySQL</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-leaf"></i> MongoDB & Firebase</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-layer-group"></i> Prisma ORM</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-database"></i> SQL Server</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Technologies</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-git-alt"></i> Git & Version Control</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-docker"></i> Docker & Containers</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-aws"></i> AWS & Cloud Services</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-cogs"></i> CI/CD & DevOps</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    const formData = new FormData(this);
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Milestones</span>
+                <h2 class="section-title">Achievements & Certifications</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Top Rated Freelancer</h3>
+                    <p>Upwork</p>
+                    <span class="achievement-year">2023</span>
+                </div>
+                
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Full-Stack Web Development</h3>
+                    <p>Professional Certification</p>
+                    <span class="achievement-year">2022</span>
+                </div>
+                
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="achievement-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>100% Job Success Score</h3>
+                    <p>Upwork & Fiverr</p>
+                    <span class="achievement-year">2024</span>
+                </div>
+                
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>JavaScript Algorithms</h3>
+                    <p>Advanced Certification</p>
+                    <span class="achievement-year">2021</span>
+                </div>
+                
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="achievement-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React Developer Certification</h3>
+                    <p>Meta/Facebook</p>
+                    <span class="achievement-year">2022</span>
+                </div>
+                
+                <div class="achievement-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>50+ Projects Delivered</h3>
+                    <p>Various Clients</p>
+                    <span class="achievement-year">2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Client Feedback</span>
+                <h2 class="section-title">What Clients Say</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Peter delivered an exceptional e-commerce platform that exceeded our expectations. 
+                        His attention to detail and technical expertise is outstanding. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Working with Peter was a pleasure. He transformed our legacy system into a modern, 
+                        scalable application. Professional, efficient, and always available for support."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>CTO, FinanceHub</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Peter's full-stack development skills are top-notch. He delivered our healthcare 
+                        management system on time and within budget. Excellent communicator and problem solver!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Emily Rodriguez</h4>
+                            <p>Director, MediCare Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    fetch('/contact-form/', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-CSRFToken': formData.get('csrfmiddlewaretoken'),
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.message) {
-            alert(data.message);
-        } else {
-            alert('Failed to send message: ' + JSON.stringify(data));
-        }
-    })
-    .catch(error => {
-        alert('Failed to send message: ' + JSON.stringify(error));
-    });
-});
-
-    </script>
-
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Let's discuss your next project or opportunity</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Work Together</h3>
+                    <p>
+                        I'm always interested in hearing about new projects and opportunities. 
+                        Whether you have a question or just want to say hi, feel free to get in touch!
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:peterkimutai004@gmail.com">peterkimutai004@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <a href="tel:+254742744884">+254 742 744 884</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Remote / Worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/peter-kimutai-692016222/" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/Kimutai004" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.upwork.com/freelancers/~01ecc9ef82cdbbe06a" target="_blank" class="social-link">
+                                <i class="fas fa-briefcase"></i>
+                            </a>
+                            <a href="https://www.fiverr.com/kimutai004" target="_blank" class="social-link">
+                                <i class="fas fa-handshake"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contactForm" class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        <span class="form-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        <span class="form-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        <span class="form-error"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    
+                    <div class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>PK<span>.</span></h3>
+                    <p>Building digital experiences that matter.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="https://github.com/Kimutai004" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/peter-kimutai-692016222/" target="_blank">LinkedIn</a></li>
+                        <li><a href="images/Resume.pdf" target="_blank">Download CV</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Peter Kimutai Kiptoo. All rights reserved.</p>
+                <p>Designed & Built with <i class="fas fa-heart"></i> by Peter Kimutai</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
     <script>
-        let scene, camera, renderer, particles = [], bubbleMaterial, velocities = [];
+        // =====================================================
+        // NAVIGATION
+        // =====================================================
         
-        function initBubbles() {
-            // Create scene
-            scene = new THREE.Scene();
+        const navbar = document.getElementById('navbar');
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenuWrapper = document.getElementById('navMenuWrapper');
+        const navItems = document.querySelectorAll('.nav-item');
         
-            // Create camera
-            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
-            camera.position.z = 200;
-        
-            // Create renderer and attach to canvas
-            renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('techCanvas'), alpha: true });
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        
-            // Create bubble material
-            bubbleMaterial = new THREE.MeshPhongMaterial({
-                color: 0x66ccff,  // Light blue
-                transparent: true,
-                opacity: 0.6,
-                shininess: 100,
-                reflectivity: 1,
-            });
-        
-            // Create bubbles
-            const bubbleCount = 200; // Adjust for more or fewer bubbles
-            for (let i = 0; i < bubbleCount; i++) {
-                // Each bubble will have a random size between 2 and 6
-                const bubbleGeometry = new THREE.SphereGeometry(Math.random() * 4 + 2, 32, 32);
-                const bubble = new THREE.Mesh(bubbleGeometry, bubbleMaterial);
-        
-                // Randomize bubble position
-                bubble.position.set(
-                    (Math.random() - 0.5) * 800,  // x position
-                    (Math.random() - 0.5) * 800,  // y position
-                    (Math.random() - 0.5) * 800   // z position
-                );
-        
-                // Store bubble
-                particles.push(bubble);
-                scene.add(bubble);
-        
-                // Assign random velocity to each bubble (for motion)
-                velocities.push({
-                    x: (Math.random() - 0.5) * 0.5,  // Adjust speed in x direction
-                    y: (Math.random() - 0.5) * 0.5,  // Adjust speed in y direction
-                    z: (Math.random() - 0.5) * 0.5   // Adjust speed in z direction
-                });
+        // Sticky navbar on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
+        });
         
-            // Add light for the bubbles to reflect
-            const light = new THREE.PointLight(0xffffff, 1);
-            light.position.set(200, 200, 200);
-            scene.add(light);
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenuWrapper.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
         
-            animateBubbles();
-        }
-        
-        function animateBubbles() {
-            requestAnimationFrame(animateBubbles);
-        
-            // Move each bubble and rotate for dynamic effect
-            particles.forEach((bubble, index) => {
-                // Apply velocity to bubble's position
-                bubble.position.x += velocities[index].x;
-                bubble.position.y += velocities[index].y;
-                bubble.position.z += velocities[index].z;
-    
-                // Rotate each bubble
-                bubble.rotation.x += 0.005;
-                bubble.rotation.y += 0.005;
-    
-                // Reset bubble's position if it goes out of bounds
-                if (bubble.position.x > 400 || bubble.position.x < -400) velocities[index].x *= -1;
-                if (bubble.position.y > 400 || bubble.position.y < -400) velocities[index].y *= -1;
-                if (bubble.position.z > 400 || bubble.position.z < -400) velocities[index].z *= -1;
+        // Close mobile menu on link click
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenuWrapper.classList.remove('active');
+                document.body.classList.remove('menu-open');
             });
+        });
         
-            // Render the scene
-            renderer.render(scene, camera);
+        // Active link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section, .hero-section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').substring(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // =====================================================
+        // TYPING EFFECT
+        // =====================================================
+        
+        const typingElement = document.querySelector('.typing-text');
+        const texts = [
+            'Full-Stack Developer',
+            'React Specialist',
+            'Node.js Expert',
+            'UI/UX Enthusiast',
+            'Problem Solver'
+        ];
+        
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingDelay = 100;
+        
+        function type() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+                typingDelay = 50;
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+                typingDelay = 100;
+            }
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                typingDelay = 2000;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                typingDelay = 500;
+            }
+            
+            setTimeout(type, typingDelay);
         }
         
-        // Handle resizing of the window
-        window.addEventListener('resize', function () {
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 1000);
         });
         
+        // =====================================================
+        // PARTICLE ANIMATION
+        // =====================================================
         
-        window.onload = initBubbles;
-    </script>
-    <script>
-        document.getElementById('navToggle').addEventListener('click', function() {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.classList.toggle('active');
+        const canvas = document.getElementById('particlesCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        let particlesArray = [];
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+                this.opacity = Math.random() * 0.5 + 0.2;
+            }
+            
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                
+                if (this.x > canvas.width || this.x < 0) {
+                    this.speedX *= -1;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.speedY *= -1;
+                }
+            }
+            
+            draw() {
+                ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        
+        function initParticles() {
+            particlesArray = [];
+            const numberOfParticles = (canvas.width * canvas.height) / 15000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+        
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particlesArray.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+            
+            connectParticles();
+            requestAnimationFrame(animateParticles);
+        }
+        
+        function connectParticles() {
+            const maxDistance = 100;
+            for (let a = 0; a < particlesArray.length; a++) {
+                for (let b = a + 1; b < particlesArray.length; b++) {
+                    const dx = particlesArray[a].x - particlesArray[b].x;
+                    const dy = particlesArray[a].y - particlesArray[b].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < maxDistance) {
+                        const opacity = (1 - distance / maxDistance) * 0.2;
+                        ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+        
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initParticles();
         });
-
+        
+        initParticles();
+        animateParticles();
+        
+        // =====================================================
+        // COUNTER ANIMATION
+        // =====================================================
+        
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current) + '+';
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target + '+';
+                    }
+                };
+                
+                // Check if element is in viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                observer.observe(counter);
+            });
+        }
+        
+        animateCounters();
+        
+        // =====================================================
+        // SKILLS PROGRESS ANIMATION
+        // =====================================================
+        
+        function animateSkills() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progress = entry.target.getAttribute('data-progress');
+                        entry.target.style.width = progress + '%';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            skillBars.forEach(bar => observer.observe(bar));
+        }
+        
+        animateSkills();
+        
+        // =====================================================
+        // SCROLL ANIMATIONS (AOS Alternative)
+        // =====================================================
+        
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('[data-aos]');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('aos-animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            reveals.forEach(element => {
+                element.classList.add('aos-init');
+                observer.observe(element);
+            });
+        }
+        
+        revealOnScroll();
+        
+        // =====================================================
+        // SCROLL TO TOP BUTTON
+        // =====================================================
+        
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // =====================================================
+        // CONTACT FORM
+        // =====================================================
+        
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            const statusDiv = document.querySelector('.form-status');
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            
+            // Simulate form submission (replace with actual form handling)
+            setTimeout(() => {
+                statusDiv.innerHTML = '<div class="success-message"><i class="fas fa-check-circle"></i> Message sent successfully!</div>';
+                statusDiv.style.display = 'block';
+                contactForm.reset();
+                
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                
+                setTimeout(() => {
+                    statusDiv.style.display = 'none';
+                }, 5000);
+            }, 1500);
+            
+            // For actual implementation, use EmailJS or similar service:
+            /*
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+                .then(() => {
+                    statusDiv.innerHTML = '<div class="success-message"><i class="fas fa-check-circle"></i> Message sent successfully!</div>';
+                    contactForm.reset();
+                })
+                .catch(() => {
+                    statusDiv.innerHTML = '<div class="error-message"><i class="fas fa-exclamation-circle"></i> Failed to send message. Please try again.</div>';
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                });
+            */
+        });
+        
+        // =====================================================
+        // SMOOTH SCROLLING
+        // =====================================================
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // =====================================================
+        // PAGE LOAD ANIMATION
+        // =====================================================
+        
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
     </script>
 
     
